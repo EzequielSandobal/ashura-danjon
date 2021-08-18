@@ -67,16 +67,19 @@ while (vida > 0)//Si la vida llega 0 se finaliza el ciclo
 {
        let bicho = Math.floor(Math.random() * 3) + 1;//Numero random de mobs
        let ranatrib =Math.floor(Math.random() * 3) + 1;// 1 DE FUEGO 2 DE agua 3 de hoja
-        let atri
+        let atri;
        daño = dañoz;
-                if (ranatrib == 3 && atributo == "1"){daño = daño * 2; atri ="Hoja"; }
-                if (ranatrib == 2 && atributo == "1"){daño = daño / 2; atri ="Agua"; }
+       if (ranatrib == 3 ){ atri ="Hoja"; }
+       if (ranatrib == 2 ){ atri ="Agua"; }
+       if (ranatrib == 1 ){ atri = "Fuego";}
+                if (ranatrib == 3 && atributo == "1"){daño = daño * 2;  }
+                if (ranatrib == 2 && atributo == "1"){daño = daño / 2; }
                 
-                if (ranatrib == 1 && atributo == "2"){daño = daño *2; atri = "Fuego";}
-                if (ranatrib == 3 && atributo == "2"){daño = daño /2; atri ="Hoja";}
+                if (ranatrib == 1 && atributo == "2"){daño = daño *2; }
+                if (ranatrib == 3 && atributo == "2"){daño = daño /2; }
                 
-                if (ranatrib == 2 && atributo == "3"){daño = daño *2; atri ="Agua";}
-                if (ranatrib == 1 && atributo == "3"){daño = daño /2; atri = "Fuego";}
+                if (ranatrib == 2 && atributo == "3"){daño = daño *2; }
+                if (ranatrib == 1 && atributo == "3"){daño = daño /2; }
        
        switch (bicho)//Se elije el mobs que va a atacar 
        {
@@ -108,7 +111,7 @@ while (vida > 0)//Si la vida llega 0 se finaliza el ciclo
                 alert("Aparecio un Fantasma de " + atri);
                 let vidaf= fantasma.vida;
                 console.log("El daño es"+ daño);
-                while (vidaf > 0 )
+                while (vidaf > 0 && vida > 0 )
                 {
                         alert("La vida de "+ player + " es:"+ vida+ "\nLa vida del zombie es: " + vidaf);
                         vidaf = vidaf - daño;
