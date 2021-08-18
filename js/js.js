@@ -1,159 +1,10 @@
-/* Se desarollan Funciones 
-const suma = (a,b) => a + b ;
-const division = (a,b) => a / b;
-
-function sinumero(x) {
-    if (isNaN(x)) {
-      return 'No es un numero!';
-    }
-    return x;
-  }
- 
-
-let sal = 1; //Se declara variable para romper ciclo
-while (sal == 1) // Ciclo de menu
-{
-//Entrada para leer opcion del ingresante
-let menu=prompt("Ingrese el numero de desafio para ver el desafio\n 1-Crear un algoritmo JS simple\n 2-Crear un algoritmo con un condicional\n 3-Crear un algoritmo utilizando un ciclo\n 4-Programacion avanzada con funciones\n 5-Salir ");   
-
-    switch(menu)//Lectura de entrada de menu
-    {
-    case "1"://En caso de uno se muestra el primer Desafio
-        alert("1-Crear un algoritmo JS simple");
-        for (let i = 1; i <= 3; i++){
-            let nombre= prompt ("Ingrese su nombre tutor:");
-            if ((nombre == "juan") || (nombre == "Juan") || (nombre == "JUAN"))
-            {
-                alert("Muchas gracias por ingresar a los desafios");
-                alert ("El primero se muestra en la consola");
-                console.log("2+5");
-                let resultado = prompt("Ingrese su resultado");
-                while (resultado != 7) {
-                resultado = prompt("El resultado es incoreco vuelva a ingresar el resultado:");
-                }
-                alert("El resultado es corecto Muchas Gracias!");
-                
-            } 
-            else
-            {
-                alert("No es su nombre Tutor, intento " + "" + i +  "de 3");
-            }
-            }
-            alert("Por favor recargue la pagina");
-            alert("Este fue el desafio 1");
-            break;
-    case "2"://En caso de dos se muestra el segundo desafio
-        alert("2-Crear un algoritmo con un condicional");
-        for (let i = 1; i <= 3; i++){
-            let nombre= prompt ("Ingrese su nombre tutor:");
-            if ((nombre == "juan") || (nombre == "Juan") || (nombre == "JUAN"))
-            {
-                alert("Muchas gracias por ingresar a los desafios");
-                alert ("El primero se muestra en la consola");
-                console.log("2+5");
-                let resultado = prompt("Ingrese su resultado");
-                while (resultado != 7) {
-                resultado = prompt("El resultado es incoreco vuelva a ingresar el resultado:");
-                }
-                alert("El resultado es corecto Muchas Gracias!");
-                
-            } 
-            else
-            {
-                alert("No es su nombre Tutor, intento " + "" + i +  "de 3");
-            }
-            }
-            alert("Por favor recargue la pagina");
-            alert("Este fue el desafio 2");
-            break;
-    case "3"://En caso de 3 se muestra el tercer desafio
-        alert("3-Crear un algoritmo utilizando un ciclo");
-        alert("Este es el desafio 3");
-        break;
-    case "4"://En caso de 3 se muestra el cuarto desafio
-        alert("4-Programacion avanzada con funciones");
-        alert("Se va a mostrar parte en consola");
-        console.log("El proyecto va a constar de unos dispositivos de reaccion que se encargan de tomar el tiempo de reaccion, cantidad de estimulos y saca un promedio de reaccion,etc");
-        console.log("En principio se va a simular la base de datos de donde vienen los valores");
-        dispositivo= prompt("Ingrese el numero del dispositivo que desea ver las resultados\n Dispositivos disponibles\n 1-Dispositivo1\n 2-Derecha\n 3-Izquierda\n 4-Salir");
-        switch (dispositivo)
-        {
-            case "1":
-                
-                let estimulos = prompt("Ingrese la cantidad de estimulos a promediar");
-                estimulos= sinumero(estimulos);
-
-                console.log("La idea es que estos valores vallan llegando de la base de datos");
-                
-                for (i = 1; i <= estimulos; i++) 
-                {   
-                   let vsumar = prompt("Ingrese el tiempo del estimulo simulado ");
-                   vsumar = Number(vsumar);
-                   console.log(vsumar)
-                   let promedio = suma(vsumar,vsumar)/ i;
-                   console.log("El promedio es "+ promedio);
- 
-                
-                }
-                break;
-            case "2":
-                let estimulos = prompt("Ingrese la cantidad de estimulos a promediar");
-                estimulos= sinumero(estimulos);
-
-                console.log("La idea es que estos valores vallan llegando de la base de datos");
-                
-                for (i = 1; i <= estimulos; i++) 
-                {   
-                   let vsumar = prompt("Ingrese el tiempo del estimulo simulado ");
-                   vsumar = Number(vsumar);
-                   console.log(vsumar)
-                   let promedio = suma(vsumar,vsumar)/ i;
-                   console.log("El promedio es "+ promedio);
- 
-                
-                }
-            break;
-            case "3":
-                let estimulos = prompt("Ingrese la cantidad de estimulos a promediar");
-                estimulos= sinumero(estimulos);
-
-                console.log("La idea es que estos valores vallan llegando de la base de datos");
-                
-                for (i = 1; i <= estimulos; i++) 
-                {   
-                   let vsumar = prompt("Ingrese el tiempo del estimulo simulado ");
-                   vsumar = Number(vsumar);
-                   console.log(vsumar)
-                   let promedio = suma(vsumar,vsumar)/ i;
-                   console.log("El promedio es "+ promedio);
- 
-                
-                }
-            break;
-            case "4":
-                alert("Gracias por ver la entrega 4 :)");
-            break;
-            default:
-                alert("El numero del dispositivo conectado no es correcto verifique el dispositivo");
-            break;
-        }
-        break;
-    case "5"://En caso de 4 saludo y rompe el ciclo
-        alert("Gracias por ver mis desfios, Saludos\n No olvide recargar la pagina para ver cada seccion :)");
-        sal = 0;//Se cambia el valor de sal para romper el ciclo 
-        break;
-    default: //Default por si no se ingresa el valor correcto
-        alert("Su entrada no es correcta, por favor ingrese un numero correcto, Muchas gracias tutor");
-        break;
-}
-}
-*/
 
 //INICIO PROJECTO JUEGO 
 //Saludo
 alert("Bienvenido al simulador de mazmorras");
 alert("Aqui veremos tu valentia como explorador");
 //Objetos 
+//Se crea objeto de nuevo jugador
 class newplayer {
     constructor (nombre, puntuacion, daño, vida)
     {
@@ -166,105 +17,102 @@ class newplayer {
         this.puntuacion++;   
     }
 }
+// Fin de new player
+//Inicio de mobs
 function mobs(nombre, vida, daño)
 {
 this.nombre = nombre;
 this.vida= vida;
 this.daño= daño;
 }
+let daño =0;
+let vida =0;
 
 const zombie = new mobs("Zombie", 100 , 2);
 const esqueleto = new mobs("Esqueleto", 100 , 4);
 const fantasma = new mobs("Fantasma", 100 , 3);
+//Fin de mobs
+
 //Inicio de juego
 let player = prompt("Hola Ingrese su nombre de aventurero");
 alert("Hola "+ player);
-
-let arma  = prompt("Ingrese que el numero de la clase que desea ser\n 1-Arquero: Life = 90 Ataque = 10\n 2-Guerrero: Life = 120 Ataque = 8");
-while (arma < 0 || arma > 3)
+//Se elije al personaje
+let pj  = prompt("Ingrese que el numero de la clase que desea ser\n 1-Arquero: Life = 90 Ataque = 10\n 2-Guerrero: Life = 120 Ataque = 8");
+while (pj < 0 || pj > 3)
 {
-    arma  = prompt("Ingrese un numero correcto\n 1-Arquero: Life = 90 Ataque = 10\n 2-Guerrero: Life = 120 Ataque = 8") ;
+    pj  = prompt("Ingrese un numero correcto\n 1-Arquero: Life = 90 Ataque = 10\n 2-Guerrero: Life = 120 Ataque = 8") ;
 }
-
-const guerrero = new newplayer(player,0,18,100);
-        let dañog = guerrero.daño;
-        let vidag = guerrero.vida;
-const arquero = new newplayer(player,0,28,80);
-        let daño = arquero.daño;
-        let vida = arquero.vida;
-
-while ((vida > 0) && (vidag > 0))
+let atributo  = prompt("Ingrese que atributo para su arma\n 1-Fuego\n2-Agua\n3-Hoja");
+while (atributo < 0 || atributo > 3)
 {
-       let bicho = Math.floor(Math.random() * 3) + 1; 
-       switch (bicho)
+     atributo  = prompt("Ingrese un atributo correcto\n 1-Fuego\n2-Agua\n3-Hoja");
+}
+//Se declaran atributos iniciales de los pj a elejir
+const guerrero = new newplayer(player,0,18,100);
+const arquero = new newplayer(player,0,20,80);
+switch(pj)
+{
+    case "1":
+        daño = guerrero.daño;
+        vida = guerrero.vida;
+    break;
+    case "2":
+        daño = arquero.daño;
+        vida = arquero.vida;
+    break;
+}
+let dañoz = daño;
+//Se inicia ciclo de daño
+while (vida > 0)//Si la vida llega 0 se finaliza el ciclo 
+{
+       let bicho = Math.floor(Math.random() * 3) + 1;//Numero random de mobs
+       let ranatrib =Math.floor(Math.random() * 3) + 1;// 1 DE FUEGO 2 DE agua 3 de hoja
+        let atri
+       daño = dañoz;
+                if (ranatrib == 3 && atributo == "1"){daño = daño * 2; atri ="Hoja"; }
+                if (ranatrib == 2 && atributo == "1"){daño = daño / 2; atri ="Agua"; }
+                
+                if (ranatrib == 1 && atributo == "2"){daño = daño *2; atri = "Fuego";}
+                if (ranatrib == 3 && atributo == "2"){daño = daño /2; atri ="Hoja";}
+                
+                if (ranatrib == 2 && atributo == "3"){daño = daño *2; atri ="Agua";}
+                if (ranatrib == 1 && atributo == "3"){daño = daño /2; atri = "Fuego";}
+       
+       switch (bicho)//Se elije el mobs que va a atacar 
        {
             case 1:
-                alert("Aparecio un Zombie");
+                
+                alert("Aparecio un Zombie de " + atri);
                 let vidaz= zombie.vida;
-                while (vidaz > 0)
+                console.log("El daño es"+ daño);
+                while (vidaz > 0 && vida > 0)
                 {
-                    
-                    if(arma == 1){
-                        alert("La vida de "+ player + " es:"+ vida+ "\nLa vida del zombie es: " + vidaz);
-                        vidaz = vidaz - daño;
-                        vida = vida - zombie.daño;
-                        arquero.puntuar();
-                        alert("Su puntuacion es:" + arquero.puntuacion);
-                    }
-                    else
-                    {
-                        alert("La vida de "+ player + " es:"+ vidag+ "\nLa vida del zombie es: " + vidaz);
-                        vidaz = vidaz - dañog;
-                        vidag = vidag - zombie.daño;  
-                        guerrero.puntuar();
-                        alert("Su puntuacion es:" + guerrero.puntuacion); 
-                    }
+                    alert("La vida de "+ player + " es:"+ vida+ "\nLa vida del zombie es: " + vidaz);
+                    vidaz = vidaz - daño;
+                    vida = vida - zombie.daño;
+                                      
                 }
                 break;
             case 2:
-                alert("Aparecio un Esqueleto");
+                alert("Aparecio un Esqueleto de " + atri);
                 let vidae= esqueleto.vida;
-                while (vidae > 0)
+                console.log("El daño es"+ daño);
+                while (vidae > 0 && vida > 0)
                 {
-                    
-                    if(arma == 1){
                         alert("La vida de "+ player + " es:"+ vida+ "\nLa vida del zombie es: " + vidae);
-                        vidaz = vidae - daño;
+                        vidae = vidae - daño;
                         vida = vida - esqueleto.daño;
-                        arquero.puntuar();
-                        alert("Su puntuacion es:" + arquero.puntuacion);
-                    }
-                    else
-                    {
-                        alert("La vida de "+ player + " es:"+ vidag+ "\nLa vida del zombie es: " + vidae);
-                        vidae = vidae - dañog;
-                        vidag = vidag - esqueleto.daño;  
-                        guerrero.puntuar();
-                        alert("Su puntuacion es:" + guerrero.puntuacion); 
-                    }
                 }
             break;
             case 3:
-                alert("Aparecio un Fantasma");
+                alert("Aparecio un Fantasma de " + atri);
                 let vidaf= fantasma.vida;
-                while (vidaf > 0)
+                console.log("El daño es"+ daño);
+                while (vidaf > 0 )
                 {
-                    
-                    if(arma == 1){
                         alert("La vida de "+ player + " es:"+ vida+ "\nLa vida del zombie es: " + vidaf);
                         vidaf = vidaf - daño;
                         vida = vida - fantasma.daño;
-                        arquero.puntuar();
-                        alert("Su puntuacion es:" + arquero.puntuacion);
-                    }
-                    else
-                    {
-                        alert("La vida de "+ player + " es:"+ vidag+ "\nLa vida del zombie es: " + vidaf);
-                        vidaf = vidaf - dañog;
-                        vidag = vidag - fantasma.daño;  
-                        guerrero.puntuar(); 
-                        alert("Su puntuacion es:" + guerrero.puntuacion);
-                    }
                 }
                 
             break;
@@ -272,7 +120,7 @@ while ((vida > 0) && (vidag > 0))
     
 }
 alert("GRACIAS POR PARTICIPAR EN EL JUEGO !!!");
-
+//FIN
 
 
 
